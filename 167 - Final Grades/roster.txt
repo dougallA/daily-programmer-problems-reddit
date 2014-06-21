@@ -1,0 +1,7 @@
+Joe, Namath 100 99 98 11 22
+Joe, Smith 33 44 55 66 33 
+Michael, Jordan 100 100 100 100 100 
+Andre, Agassi 5 66 33 99 55
+Tony, Gonzalez 3 4 5 6 1
+Wayne, Gretzky 91 91 91 91 95
+Pete, Sampras 60 60 60 60 60
