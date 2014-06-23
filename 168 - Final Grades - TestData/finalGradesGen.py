@@ -37,17 +37,23 @@ Written by Andrew MacDougall Jun 23, 2014
 import random, sys
 
 def gen_record():
-    first_name = random.choice(open("dist.all.first", 'r').readlines()).rstrip()
-    last_name = random.choice(open("dist.all.last", 'r').readlines()).rstrip()
+    first_name = random.choice(first_names.readlines()).rstrip()
+    last_name = random.choice(last_names.readlines()).rstrip()
+    first_names.seek(0)
+    last_names.seek(0)
     return first_name + ", " + last_name + " " + " ".join([str(random.randint(0,100))  for n in range(0,5)])
 
 
 if __name__ == "__main__":
+    first_names = open("dist.all.first", 'r')
+    last_names = open("dist.all.last", 'r')
     if len(sys.argv) == 2:
         for x in range (0, int(sys.argv[1])):
             print gen_record()
     else: 
         print "Please supply exactly one argument representing the size of the data set to generate."
+    first_names.close()
+    last_names.close()
 
 
 
