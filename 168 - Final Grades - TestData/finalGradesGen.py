@@ -37,6 +37,7 @@ Written by Andrew MacDougall Jun 23, 2014
 import random, sys
 
 def gen_record():
+    # This is slow, maybe b/c have to read all lines every time.
     first_name = random.choice(first_names.readlines()).rstrip()
     last_name = random.choice(last_names.readlines()).rstrip()
     first_names.seek(0)
