@@ -1,0 +1,18 @@
+# Assuming that array read in from text file. 
+
+def print_matrix(A):
+    for i in range (len(A)):
+        print A[i]
+
+with open("data.txt", 'r') as data:
+    test_array = ([[char for char in row if char != '\n' and char != ' '] 
+                  for row in data.readlines()])
+
+N = len(test_array)
+rotated_array = [[0]*N for i in range(N)]
+
+for i in range(N):
+    for j in range(N):
+        rotated_array[i][j] = test_array[N-j-1][i]
+
+print_matrix(rotated_array)
